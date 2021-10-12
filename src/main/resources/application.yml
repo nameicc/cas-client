@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+cas:
+  server:
+    prefix: https://cas.nameicc.org:8443/cas
+    login: ${cas.server.prefix}/login
+    logout: ${cas.server.prefix}/logout
+
+  client:
+    prefix: http://client.cas.nameicc.org:${server.port}
+    login: ${cas.client.prefix}/login/cas
+    logoutRelative: /logout/cas
+    logout: ${cas.client.prefix}${cas.client.logoutRelative}
