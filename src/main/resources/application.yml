@@ -12,3 +12,14 @@ cas:
     login: ${cas.client.prefix}/login/cas
     logoutRelative: /logout/cas
     logout: ${cas.client.prefix}${cas.client.logoutRelative}
+
+spring:
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_security?characterEncoding=UTF-8
+    username: root
+    password: root
+
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
